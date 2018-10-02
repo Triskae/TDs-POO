@@ -17,11 +17,11 @@ public class Carte {
             case AS: return 11;
             case ROI: return 4;
             case DAME: return 3;
+            case SEPT: return 0;
+            case HUIT: return 0;
             case VALET:
                 if(!this.atout) return 2;
                 return 20;
-            case SEPT: return 0;
-            case HUIT: return 0;
             case NEUF:
                 if(!this.atout) return 0;
                 return 14;

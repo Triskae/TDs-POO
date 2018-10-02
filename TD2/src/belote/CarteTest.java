@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class CarteTest {
     public static void main(String[] args) {
-        Couleur atout = Utils.tirerAtout();
 
         Carte c1 = new Carte(true, Couleur.COEUR, Valeur.VALET);
+
         System.out.println(c1.calculerValeur());
 
         ArrayList main4Cartes = new ArrayList();
