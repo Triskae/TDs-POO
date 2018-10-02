@@ -1,3 +1,5 @@
+package belote;
+
 import java.util.ArrayList;
 import java.util.Random;
 

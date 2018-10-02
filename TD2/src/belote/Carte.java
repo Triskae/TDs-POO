@@ -1,3 +1,5 @@
+package belote;
+
 public class Carte {
 
     private boolean atout;
@@ -30,7 +32,7 @@ public class Carte {
 
     @Override
     public String toString() {
-        return "Carte{" +
+        return "belote.Carte{" +
                 "atout=" + atout +
                 ", couleur=" + couleur +
                 ", valeur=" + valeur +

@@ -1,3 +1,5 @@
+package belote;
+
 public enum Valeur {
     SEPT,
     HUIT,

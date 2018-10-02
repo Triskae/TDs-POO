@@ -1,3 +1,5 @@
+package polynome;
+
 public class Complexe {
     private double imaginaire;
     private double reel;

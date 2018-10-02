@@ -1,3 +1,5 @@
+package polynome;
+
 public class Polynome {
 
     private double a, b, c;
