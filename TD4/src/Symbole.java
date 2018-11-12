@@ -3,6 +3,7 @@ import java.awt.*;
 public class Symbole {
 
     Epaisseur epaisseur;
+    int test;
 
 
     public Symbole(char symbole, int x, int y, Graphics g, Nature nature) {

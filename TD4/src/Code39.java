@@ -8,29 +8,9 @@ public class Code39 extends Applet {
 
     public void paint(Graphics g) {
         this.g = g;
-//        IterateurSymbole iterateurSymboleEtoileD = new IterateurSymbole("010010100", g);
-//        IterateurSymbole iterateurSymboleF = new IterateurSymbole("001011000", g);
-//        IterateurSymbole iterateurSymboleI = new IterateurSymbole("001001100", g);
-//        IterateurSymbole iterateurSymboleL = new IterateurSymbole("001000011", g);
-//        IterateurSymbole iterateurSymboleI2 = new IterateurSymbole("001001100", g);
-//        IterateurSymbole iterateurSymboleP = new IterateurSymbole("001010010", g);
-//        IterateurSymbole iterateurSymboleE = new IterateurSymbole("100011000", g);
-//        IterateurSymbole iterateurSymboleEtoileF = new IterateurSymbole("010010100", g);
-
-
-//        String string = "Filipe Doutel Silva";
-//        char[] stringArray = string.toCharArray();
-//
-//        new IterateurSymbole(charToBinary('*'), g);
-//
-//        for (char currentChar : stringArray) {
-//            new IterateurSymbole(charToBinary(currentChar), g);
-//        }
-//
-//        new IterateurSymbole(charToBinary('*'), g);
-
-        stringToBarCode("*Je taime sorel*");
-
+        stringToBarCode("*JAVA 2012*");
+        String tab [] = new String[0];
+        int i = tab.length;
     }
 
     public void stringToBarCode(String string) {
