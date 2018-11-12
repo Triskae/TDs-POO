@@ -28,7 +28,7 @@ public class Tortue {
     }
 
     public void goLeft (double delta) {
-        this.orientation += (delta * Math.PI)/100;
+        this.orientation += (delta * Math.PI)/180;
     }
 
     public void goRight (double delta) {
@@ -42,5 +42,15 @@ public class Tortue {
 
     public void reculer(double distance) {
         avancer(-distance);
+    }
+
+    @Override
+    public String toString() {
+        return "Tortue{" +
+                "leve=" + leve +
+                ", x=" + x +
+                ", y=" + y +
+                ", orientation=" + orientation +
+                '}';
     }
 }
