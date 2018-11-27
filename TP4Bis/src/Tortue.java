@@ -1,6 +1,7 @@
 import java.applet.Applet;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Tortue extends Applet {
 
@@ -27,6 +28,13 @@ public class Tortue extends Applet {
         this.orientation = orientation;
     }
 
+    public Tortue(double initX, double initY) {
+        this.leve = leve;
+        this.x = 0;
+        this.y = 0;
+        this.orientation = orientation;
+    }
+
     public void changerPosStylo() {
         leve = !leve;
     }
@@ -39,13 +47,18 @@ public class Tortue extends Applet {
         goLeft(-delta);
     }
 
-    public void avancer(double distance) {
-        this.x += distance + Math.cos(this.orientation);
-        this.y += distance + Math.sin(this.orientation);
+    public void avancer(double distance, Graphics g) {
+
+        double posInitialX = this.x, posInitialY = this.y;
+
+        this.x += distance * Math.cos(this.orientation);
+        this.y += distance * Math.sin(this.orientation);
+
+        if(leve) listCommands.add(new DrawLine(posInitialX, posInitialY, this.x, this.y, g));
     }
 
-    public void reculer(double distance) {
-        avancer(-distance);
+    public void reculer(double distance, Graphics g) {
+        avancer(-distance, g);
     }
 
     @Override
@@ -59,12 +72,28 @@ public class Tortue extends Applet {
     }
 
     public void paint(Graphics g) {
-        Tortue t = new Tortue();
-        int posInitialX = t.getX();
-        int posInitialY = t.getY();
-        t.goRight(45.0);
-        t.avancer(10);
+        Tortue t = new Tortue(50, 50);
 
-        listCommands.add(new DrawLine(posInitialX, posInitialY, t.getX, 10));
+
+        double posInitialX = t.x;
+        double posInitialY = t.y;
+
+        t.changerPosStylo();
+
+//        for (int i = 0; i < 10000; i++) {
+//            double random1 = Math.random()*100-10;
+//            double random2 = Math.random()*20-10;
+//
+//            t.avancer(random1, g);
+//            t.goRight(random1);
+//        }
+
+        t.avancer(50, g);
+        t.goRight(-90);
+        t.avancer(50, g);
+        t.goRight(-90);
+        t.avancer(50, g);
+        t.goRight(-90);
+        t.avancer(50, g);
     }
 }
