@@ -1,14 +1,18 @@
 package fr.unice.bar;
 
+import java.util.Comparator;
+
 public class ArbreBinaire {
     Noeud racine;
+    Comparator comparator;
 
     public ArbreBinaire(int valeur) {
         this.racine = new Noeud(valeur);
     }
 
-    public ArbreBinaire(Noeud racine, Noeud gauche, Noeud droite) {
+    public ArbreBinaire(Noeud racine, Noeud gauche, Noeud droite, Comparator comparator) {
         this.racine = racine;
+        this.comparator = comparator;
     }
 
     Noeud inserer(int value, Noeud noeud) {
